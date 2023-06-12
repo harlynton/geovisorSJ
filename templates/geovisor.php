@@ -203,7 +203,7 @@ if($bt=="CrearVista"){
 		popupAnchor: [0, -5]
 	});
 
-L.Marker.prototype.options.icon = myIcon;
+	L.Marker.prototype.options.icon = myIcon;
 
 	function popUpInfoConsulta(feature, layer) {
 		if (feature.properties) {
@@ -276,6 +276,19 @@ L.Marker.prototype.options.icon = myIcon;
 	};
 
 	L.control.layers(baseLayers, overlays).addTo(map);
+
+	// Estilos CSS para la ventana estática
+	var ventanaEstilo = 'position:absolute; background-color:white; width:300px; height:200px; border-radius:10px; overflow:auto; bottom:10px; left:10px;';
+
+	// Crear la ventana estática como una capa de superposición personalizada
+	var ventanaEstatica = L.control({ position: 'bottomleft' });
+	ventanaEstatica.onAdd = function(map) {
+	this._div = L.DomUtil.create('div', 'ventana-estatica');
+	this._div.innerHTML = 'Contenido de la ventana estática';
+	this._div.style = ventanaEstilo;
+	return this._div;
+	};
+	ventanaEstatica.addTo(map);
 
 </script>
 <?php
