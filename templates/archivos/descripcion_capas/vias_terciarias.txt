@@ -1,28 +1,28 @@
-NOMBRE DE LA CAPA: Vías Terciarias Municipales 
-TIPO DE DATO: Shapefile
-DESCRIPCIÓN DE LA CAPA:
-	- Geometría: Líneas que representan los segmentos de vías
-	- Atributos: Nombre, código, inicio, fin, centros poblados,
-				 Superficie, ancho, longitud, estado.
-lONGITUD TOTAL VÍAS MUNICIPIO: 			108km
-	- LONGITUD TOTAL EN BUEN ESTADO: 	20km 
-	- LONGITUD TOTAL EN ESTADO REGULAR: 55km
-	- LONGITUD TOTAL EN MAL ESTADO: 	33km
-INTERVENCIÓN A CORTO PLAZO: 			33 km 
-SUPERFICIE PREDOMINANTE: 				Afirmado
-COMUNIDADES AFECTADAS POR MAL ESTADO DE VÍAS: 
-	- Corregimiento de San Juancito
-	- Vereda Calle Larga
-	- Siete Vueltas
-	- Filo de Damaquiel 
-	- La Mugrosa
-	- Sabanilla 
-	- Entra si puedes
-	- El descanso
-
-
-
-
-						
-						
-
+<div style ="padding-left:5px; padding-top: 5px;">
+	<p><strong>NOMBRE DE LA CAPA:</strong>Vías Terciarias Municipales</p>
+	<p><strong>TIPO DE DATO:</strong>Shapefile</p>
+	<p><strong>DESCRIPCIÓN DE LA CAPA:</strong></p>
+		<ul>
+			<li><strong>Geometría:</strong>Líneas que representan los segmentos de vías</li>
+			<li><strong>Atributos:</strong>Nombre, código, inicio, fin, centros poblados, Superficie, ancho, longitud, estado.</li>
+		</ul>
+	<p><strong>LONGITUD TOTAL VÍAS MUNICIPIO:</strong>108km</p>
+		<ul>
+			<li><strong>LONGITUD TOTAL EN BUEN ESTADO:</strong>20km</li>
+			<li><strong>LONGITUD TOTAL EN ESTADO REGULAR:</strong>55km</li>
+			<li><strong>LONGITUD TOTAL EN MAL ESTADO:</strong>33km</li>
+		</ul>
+	<p><strong>INTERVENCIÓN A CORTO PLAZO:</strong>33 km </p>
+	<p><strong>SUPERFICIE PREDOMINANTE:</strong>Afirmado</p>
+	<p><strong>COMUNIDADES AFECTADAS POR MAL ESTADO DE VÍAS:</strong></p>
+		<ul>
+			<li>Corregimiento de San Juancito</li>
+			<li>Vereda Calle Larga</li>
+			<li>Siete Vueltas</li>
+			<li>Filo de Damaquiel </li>
+			<li>La Mugrosa</li>
+			<li>Sabanilla</li> 
+			<li>Entra si puedes</li>
+			<li>El descanso</li>
+		</ul>
+</div>

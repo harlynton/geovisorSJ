@@ -57,7 +57,11 @@ if($bt=="Consultar"){
 	$consultaSQLparaSelect="DROP VIEW IF EXISTS vista;
 	CREATE VIEW vista as SELECT * FROM {$_REQUEST['selTablas']};";
 
-	//header("location:geovisor.php");
+	//Uso un input invisible para almacenar la selección del desplegable selTablas:
+	?>
+		<input type="text" id="seleccion_capa" value ="<?php echo $_REQUEST['selTablas']; ?>" hidden>
+	<?php
+
 	}
 if($bt=="Cargararchivo"){
 	$objControlGeoJson = new ControlGeoJson();
@@ -280,14 +284,27 @@ if($bt=="CrearVista"){
 	// Estilos CSS para la ventana estática
 	var ventanaEstilo = 'position:absolute; background-color:white; width:300px; height:200px; border-radius:10px; overflow:auto; bottom:10px; left:10px;';
 
+	//Recupero el valor seleccionado de la lista desplegable de capas:
+	var select = document.getElementById("seleccion_capa");
+	var descripcionCapa = select.value;
+
 	// Crear la ventana estática como una capa de superposición personalizada
 	var ventanaEstatica = L.control({ position: 'bottomleft' });
 	ventanaEstatica.onAdd = function(map) {
 	this._div = L.DomUtil.create('div', 'ventana-estatica');
-	this._div.innerHTML = 'Contenido de la ventana estática';
+	
+	//Recuperación del archivo con la información de la capa seleccionada:
+	var archivo = fetch(`../templates/archivos/descripcion_capas/${descripcionCapa}.txt`)
+		.then(response => response.text())
+		.then(data => {
+			this._div.innerHTML = data
+		}
+	);
+	
 	this._div.style = ventanaEstilo;
 	return this._div;
 	};
+		
 	ventanaEstatica.addTo(map);
 
 </script>

@@ -1,10 +1,11 @@
-<p>NOMBRE DE LA CAPA: Barrios</p>
-<p>TIPO DE DATO: Shapefile</p>
-<p>DESCRIPCIÓN DE LA CAPA:</p>
-<ul>
-   <li>Geometría: Polígonos que representan las áreas correspondientes a los barrios del municipio</li>
-   <li>Atributos: Nombre, población (No. habitantes), Perímetro, área.</li>
-</ul>
-<p>No. BARRIOS: 13</p>
-<p>POBLACIÓN TOTAL URBANA: 6.107 habitantes</p>
-
+<div style ="padding-left:5px; padding-top: 5px;">
+	<p><strong>NOMBRE DE LA CAPA:</strong> Barrios</p>
+	<p><strong>TIPO DE DATO:</strong> Shapefile</p>
+	<p><strong>DESCRIPCIÓN DE LA CAPA:</strong></p>
+	<ul>
+	   <li><strong>Geometría:</strong> Polígonos que representan las áreas correspondientes a los barrios del municipio</li>
+	   <li><strong>Atributos:</strong> Nombre, población (No. habitantes), Perímetro, área.</li>
+	</ul>
+	<p><strong>No. BARRIOS:</strong> 13</p>
+	<p><strong>POBLACIÓN TOTAL URBANA:</strong> 6.107 habitantes</p>
+</div>

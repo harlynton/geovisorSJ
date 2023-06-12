@@ -1,33 +1,37 @@
-NOMBRE DE LA CAPA: Equipamiento Municipal
-TIPO DE DATO: Shapefile
-DESCRIPCIÓN DE LA CAPA:
-	- Geometría: Polígonos que representan las áreas de los equipamientos municipales
-	- Atributos: Nombre, Estado, Ubicación, Perímetro, Área
-ÁREA TOTAL EQUIPAMIENTO MUNICIPAL: 10.6 has
-EQUIPAMIENTO EN MAL ESTADO E INTERVENCIÓN A CORTO PLAZO:
-			CENTRO DE DESARROLLO INFANTIL DAMAQUIEL: 		0.01 has
-			CENTRO DE DESARROLLO INFANTIL SIETE VUELTAS:	0.10 has 
-			CENTRO DE DESARROLLO INFANTIL UVERO:			3.84 has
-			CENTRO EDUCATIVO RURAL  MONTEBELLO:				0.09 has
-			CENTRO EDUCATIVO RURAL BOCA DEL RÍO:	 		0.28 has 
-			CENTRO EDUCATIVO RURAL BOCA TAPADA:				0.34 has
-			CENTRO EDUCATIVO RURAL EL BONGO:				0.70 has
-			CENTRO EDUCATIVO RURAL ISLABOA: 				0.40 has
-			CENTRO EDUCATIVO RURAL SABANILLA:				0.57 has
-			CENTRO EDUCATIVO RURAL SAN JUANCITO:			0.25 has
-			CENTRO EDUCATIVO RURAL VIJAGUAL: 				0.10 has
-			CENTRO EDUCATIVO RURAL LOS VOLCANES:			0.64 has
-			COLEGIO MONSEÑOR ESCOBAR DAMAQUIEL:				0.15 has
-			CEMENTERIO 7 DE AGOSTO:							0.40 has
-			CEMENTERIO	SAN JUAN ORIENTAL:					0.27 has
-			CEMENTERIO	CALLE LARGA: 						0.28 has
-			CEMENTERIO	SAN NICOLAS							0.25 has 
-			CEMENTERIO  SIETE VUELTAS: 						0.31 has
-			CEMENTERIO UVERO: 								0.21 has
-			ESCUELA BELÉN: 									0.14 has
-			INSTITUTO EDUCATIVO FILO DE DAMAQUIEL: 			0.26 has
-			PUESTO DE SALUD	DAMAQUIEL						0.13 has
-			PUESTO DE SALUD SIETE VUELTAS: 					0,03 has
-
+<div style ="padding-left:5px; padding-top: 5px;">
+	<p><strong>NOMBRE DE LA CAPA: Equipamiento Municipal</strong></p>
+	<p><strong>TIPO DE DATO: Shapefile</strong></p>
+	<p><strong>DESCRIPCIÓN DE LA CAPA:</strong></p>
+		<ul>
+			<li><strong>Geometría:</strong>  Polígonos que representan las áreas de los equipamientos municipales</li>
+			<li><strong>Atributos:</strong>  Nombre, Estado, Ubicación, Perímetro, Área</li>
+		</ul>
+	<p><strong>ÁREA TOTAL EQUIPAMIENTO MUNICIPAL:</strong>10.6 has</p>	
+	<p><strong>EQUIPAMIENTO EN MAL ESTADO E INTERVENCIÓN A CORTO PLAZO:</strong></p>
+		<ul>
+			<li><strong>CENTRO DE DESARROLLO INFANTIL DAMAQUIEL:</strong>0.01 has</li>
+			<li><strong>CENTRO DE DESARROLLO INFANTIL SIETE VUELTAS:</strong>0.10 has</li>
+			<li><strong>CENTRO DE DESARROLLO INFANTIL UVERO:</strong>3.84 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL  MONTEBELLO:</strong>0.09 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL BOCA DEL RÍO:</strong>0.28 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL BOCA TAPADA:</strong>0.34 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL EL BONGO:</strong>0.70 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL ISLABOA:</strong>0.40 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL SABANILLA:</strong>0.57 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL SAN JUANCITO:</strong>0.25 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL VIJAGUAL:</strong>0.10 has</li>
+			<li><strong>CENTRO EDUCATIVO RURAL LOS VOLCANES:</strong>0.64 has</li>
+			<li><strong>COLEGIO MONSEÑOR ESCOBAR DAMAQUIEL:</strong>0.15 has</li>
+			<li><strong>CEMENTERIO 7 DE AGOSTO:</strong>0.40 has</li>
+			<li><strong>CEMENTERIO	SAN JUAN ORIENTAL:</strong>0.27 has</li>
+			<li><strong>CEMENTERIO	CALLE LARGA:</strong>0.28 has</li>
+			<li><strong>CEMENTERIO	SAN NICOLAS:</strong>0.25 has</li>
+			<li><strong>CEMENTERIO  SIETE VUELTAS:</strong>0.31 has</li>
+			<li><strong>CEMENTERIO UVERO:</strong>0.21 has</li>
+			<li><strong>ESCUELA BELÉN:</strong>0.14 has</li>
+			<li><strong>INSTITUTO EDUCATIVO FILO DE DAMAQUIEL:</strong>0.26 has</li>
+			<li><strong>PUESTO DE SALUD	DAMAQUIEL</strong>0.13 has</li>
+			<li><strong>PUESTO DE SALUD SIETE VUELTAS:</strong>0,03 has</li>
+		</ul>
 	
-	
+</div>

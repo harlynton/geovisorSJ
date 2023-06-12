@@ -1,19 +1,25 @@
-NOMBRE DE LA CAPA: Espacio Público
-TIPO DE DATO: Shapefile
-DESCRIPCIÓN DE LA CAPA:
-	- Geometría: Polígonos que representan las áreas de espacio público del municipio
-	- Atributos: Tipo, Nombre, Estado, perímetro, área, ubicación.
-
-ÁREA TOTAL ESPACIO PUBLICO: 		10.3 has
-	- Área total parques: 			0.94 has
-	- Área total cancha deportiva: 	9.20 has 
-	- Área total gimnasio público: 	0.16 has
-ÍNDICE DE ESPACIO: 3.85 m2/habitante
-INTERVENCIÓN A CORTO PLAZO: Se consideran los espacios píblicos en mal estado 
-	- Parque San Juancito: 			0.13 has
-	- Parque infantil Uvero: 		0.10 has
-	- Parque Dos de Abril: 			0.13 has
-	- Cancha de fútbol Damaquiel: 	2.00 has
-	- Cancha entrada de Uvero: 		0.02 has
-	- Cancha principal Belén: 		0.70 has
-
+<div style ="padding-left:5px; padding-top: 5px;">
+	<p><strong>NOMBRE DE LA CAPA:</strong>Espacio Público</p>
+	<p><strong>TIPO DE DATO:</strong>Shapefile</p>
+	<p><strong>DESCRIPCIÓN DE LA CAPA:</strong></p>
+		<ul>
+			<li><strong>Geometría:</strong>Polígonos que representan las áreas de espacio público del municipio</li>
+			<li><strong>Atributos:</strong>Tipo, Nombre, Estado, perímetro, área, ubicación.</li>
+		</ul>
+	<p><strong>ÁREA TOTAL ESPACIO PUBLICO:</strong>10.3 has</p>
+		<ul>
+			<li><strong>Área total parques:</strong>0.94 has</li>
+			<li><strong>Área total cancha deportiva:</strong>9.20 has</li>
+			<li><strong>Área total gimnasio público:</strong>0.16 has</li>
+		</ul>
+	<p><strong>ÍNDICE DE ESPACIO:</strong>3.85 m2/habitante</p>
+	<p><strong>INTERVENCIÓN A CORTO PLAZO:</strong>Se consideran los espacios píblicos en mal estado</p>
+		<ul>
+			<li><strong>Parque San Juancito:</strong>0.13 has</li>
+			<li><strong>Parque infantil Uvero:</strong>0.10 has</li>
+			<li><strong>Parque Dos de Abril:</strong>0.13 has</li>
+			<li><strong>Cancha de fútbol Damaquiel:</strong>2.00 has</li>
+			<li><strong>Cancha entrada de Uvero:</strong>0.02 has</li>
+			<li><strong>Cancha principal Belén:</strong>0.70 has</li>
+		</ul>
+</div>
