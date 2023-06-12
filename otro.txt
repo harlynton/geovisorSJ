@@ -1,0 +1,63 @@
+Para adicionar la generación de la ventana emergente con la información y descripción de la capa en el código proporcionado, puedes seguir estos pasos:
+
+1. Define el objeto informacionCapas con la información y descripción de cada capa en tu código. 
+Puedes hacerlo antes del bloque condicional if de la siguiente manera:
+
+$informacionCapas = array(
+    'nombreCapa1' => array(
+        'descripcion' => 'Descripción de la capa 1',
+        // Agrega más propiedades según sea necesario
+    ),
+    'nombreCapa2' => array(
+        'descripcion' => 'Descripción de la capa 2',
+        // Agrega más propiedades según sea necesario
+    ),
+    // Agrega más capas según sea necesario
+);
+
+Reemplaza 'nombreCapa1', 'nombreCapa2' y las descripciones con los nombres y descripciones correspondientes para cada capa.
+
+2. Dentro del bloque condicional if donde se encuentra la lógica para consultar y obtener el GeoJSON, 
+agrega el código para generar la ventana emergente. Asegúrate de obtener el nombre de la capa (geotabla) seleccionada en la variable $_REQUEST['selTablas'] 
+y utilizarla para acceder a la información de la capa en el objeto informacionCapas. Aquí tienes un ejemplo de cómo hacerlo:
+
+if ($bt == "Consultar") {
+    $objControlGeoJson = new ControlGeoJson();
+    $objControlArchivos = new ControlArchivos();
+    $objControlArchivos->borrarUnArchivo("../templates/data/consulta.js");
+    $objControlArchivos->crearArchivoBorrarContenido("../templates/data/consulta.js");
+    $objControlArchivos->escribirUnaLineaYAlFrente("var consulta=");
+
+    $textoGeoJson = $objControlGeoJson->obtenerGeoJson($_REQUEST['selTablas'], 'gid');
+
+    $objControlArchivos->escribirUnaLineaYDebajo($textoGeoJson);
+    $objControlArchivos->cerrarArchivo();
+
+    $consultaSQLparaSelect = "DROP VIEW IF EXISTS vista;
+    CREATE VIEW vista as SELECT * FROM {$_REQUEST['selTablas']};";
+
+    // Generar ventana emergente con la información y descripción de la capa
+    $nombreCapa = $_REQUEST['selTablas'];
+    $descripcionCapa = isset($informacionCapas[$nombreCapa]['descripcion']) ? $informacionCapas[$nombreCapa]['descripcion'] : 'Descripción no disponible';
+
+    // Agregar la ventana emergente al código de consulta.js
+    $objControlArchivos->escribirUnaLineaYDebajo("consulta.bindPopup('<div>Información de la capa:</div><div>Nombre de la capa: " . $nombreCapa . "</div><div>Descripción: " . $descripcionCapa . "</div>');");
+
+    // Redirigir a la página del geovisor
+    // header("location:geovisor.php");
+}
+
+
+
+
+En este ejemplo, se obtiene el nombre de la capa seleccionada en la variable $nombreCapa y se busca la descripción correspondiente en el objeto informacionCapas. 
+Si se encuentra una descripción para la capa, se utiliza en la generación de la ventana emergente. De lo contrario, se utiliza una descripción predeterminada.
+
+Luego, se utiliza el objeto $objControlArchivos para agregar el código de la ventana emergente al archivo consulta.js mediante la función escribirUnaLineaYDebajo. 
+Asegúrate de que este archivo esté vinculado correctamente en tu página HTML del geovisor.
+
+Por último, se redirige a la página del geovisor utilizando header("location:geovisor.php"). Puedes habilitar esta línea eliminando el comentario según tus necesidades.
+
+Recuerda que debes definir y mantener actualizado el objeto $informacionCapas con la información y descripción correctas de cada capa en tu código PHP.
+
+

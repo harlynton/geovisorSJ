@@ -1,0 +1,12 @@
+NOMBRE DE LA CAPA: Usos del suelo 
+TIPO DE DATO: Shapefile
+DESCRIPCIÓN DE LA CAPA:
+	- Geometría: Polígonos que representan las áreas correspondientes al uso del suelo
+	- Atributos: Codigo categoría, Categoría cobertura, uso actual, nomenclatura, perímetro, área
+TIPO DE USO: 
+	- Forestal: 		1.216 has
+	- Agrícola: 		11.203 has
+	- Asentamiento: 	99 has
+	- Ganadera: 		11.465 has
+	- Recuperación: 	1.134 has
+	- Uso sostenible: 	34 has

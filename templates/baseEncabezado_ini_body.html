@@ -1,0 +1,78 @@
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+            <img src="../static/img/Escudo.png" width="60" height="60" alt="">
+          </a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../templates/menu.php"><h6>Home</h6> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <h6>Usuarios</h6>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../templates/vistaUsuarios.php">Usuarios</a></li>
+                        <li><a class="dropdown-item" href="../templates/vistaRoles.php">Roles</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <h6>Evidencias</h6>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Evidencias</a></li>
+                        <li><a class="dropdown-item" href="#">Tipos Evidencias</a></li>
+                        <li><a class="dropdown-item" href="#">Autores</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                    </ul>
+                </li> -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <h6>Indicadores</h6>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Indicadores</a></li>
+                        <li><a class="dropdown-item" href="#">Tipo Indicador</a></li>
+                        <li><a class="dropdown-item" href="#">otros</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                    </ul>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/geovisor.php"><h6><b>Geovisor</b></h6></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/archivos/otros/MANUAL DE USUARIO DEL GEOVISOR MUNICIPAL DE SAN JUAN DE URABÁ.pdf" target="_blank"><h6><b>Manual de Usuario</b></h6></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled">Link</a>
+                </li> -->
+            </ul>
+            <!-- <form class="d-flex">
+                <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+            <ul style="list-style-type: none;">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <h6><?php echo $_SESSION["ema"]; ?></h6>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../templates/cerrarSesion.php">Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- <a><?php echo $_SESSION["ema"]; ?></a>
+            <a href="../templates/cerrarSesion.php" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Cerrar Sesión</a> -->
+
+            <!-- <a  href="../templates/cerrarSesion.php">Cerrar Sesión<br><p><?php echo $_SESSION["ema"]; ?></p></a> -->
+        </div>
+    </nav>

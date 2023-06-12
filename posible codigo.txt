@@ -1,0 +1,104 @@
+Sí, es posible complementar el código proporcionado con una ventana que describa cada archivo GeoJSON. 
+Aquí hay una posible manera de hacerlo:
+
+<?php
+class ControlGeoJson{
+    var $msg;
+    function __construct(){
+        $this->msg="ok";
+    }
+    function obtenerGeoJson($geoTabla,$campo){
+        $textoGeoJson="";
+        $comandoSql ="SELECT row_to_json(fc) 
+                        FROM (SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features 
+                        FROM (SELECT 'Feature' As type, ST_AsGeoJSON(lg.geom)::json As geometry, row_to_json(lp) As properties 
+                        FROM public.{$geoTabla} As lg INNER JOIN 
+                        (SELECT * FROM public.{$geoTabla}) As lp ON lg.{$campo} = lp.{$campo}) As f ) As fc;";
+        $objControlConexion = new ControlConexionPostgreSQL();
+        $objControlConexion->abrirBd($GLOBALS['serv'],$GLOBALS['usua'],$GLOBALS['pass'],$GLOBALS['bdat'],$GLOBALS['port']);
+        $cursor=$objControlConexion->ejecutarSelect($comandoSql);
+        if ($registro= pg_fetch_row($cursor)) {
+            $textoGeoJson=$registro[0];
+        }
+        $objControlConexion->cerrarBd();
+        return $textoGeoJson;
+    }
+
+    function obtenerVentanaGeoJson($geoTabla,$campo){
+        $geoJson = $this->obtenerGeoJson($geoTabla, $campo);
+        $ventana = "<div>Descripción del archivo GeoJSON:</div>";
+        $ventana .= "<div>$geoTabla</div>";
+        // Puedes agregar más detalles o información sobre el archivo GeoJSON según tus necesidades
+        return $ventana;
+    }    
+}
+?>
+
+
+En este complemento del código, se agrega una nueva función llamada obtenerVentanaGeoJson($geoTabla, $campo). 
+Esta función utiliza el método existente obtenerGeoJson($geoTabla, $campo) para obtener el GeoJSON correspondiente.
+
+A continuación, se crea una ventana HTML con la descripción del archivo GeoJSON. En este ejemplo, 
+la ventana simplemente muestra el nombre de la tabla correspondiente al GeoJSON, pero puedes agregar 
+más detalles según tus necesidades.  Puedes personalizar el contenido y el estilo de la ventana según tus requisitos.
+Finalmente, la función devuelve la ventana generada.
+
+Al utilizar esta función adicional obtenerVentanaGeoJson(), puedes obtener el GeoJSON y 
+mostrar una ventana con la descripción del archivo GeoJSON correspondiente.
+
+
+Si tienes varios archivos GeoJSON que se visualizan en el mapa utilizando Leaflet.js y deseas crear una ventana de 
+descripción para cada archivo, puedes seguir los siguientes pasos:
+
+1. Asegúrate de tener una forma de identificar cada archivo GeoJSON y vincularlo con su respectiva descripción. 
+Puede ser un identificador único asociado a cada archivo o cualquier otro tipo de referencia.
+
+2. Modifica la función obtenerVentanaGeoJson() para aceptar el identificador único del archivo GeoJSON como 
+parámetro adicional:
+
+[este codigo dice JavaScript]
+
+function obtenerVentanaGeoJson($geoTabla, $campo, $id){
+    $geoJson = $this->obtenerGeoJson($geoTabla, $campo);
+    $ventana = "<div>Descripción del archivo GeoJSON ($id):</div>";
+    $ventana .= "<div>$geoTabla</div>";
+    // Puedes agregar más detalles o información sobre el archivo GeoJSON según tus necesidades
+    return $ventana;
+}
+
+3. En tu código Leaflet.js, cuando agregas cada archivo GeoJSON como una capa al mapa, puedes asociar un evento a esa capa para mostrar la ventana de descripción cuando 
+se haga clic en ella. Aquí hay un ejemplo de cómo hacerlo:
+
+
+// Suponiendo que tienes un array de objetos que contiene información sobre cada archivo GeoJSON, incluido el identificador único
+var archivosGeoJson = [
+    { id: 1, tabla: "archivo1", campo: "campo1" },
+    { id: 2, tabla: "archivo2", campo: "campo2" },
+    // Agrega más objetos según sea necesario
+];
+
+// Itera sobre cada objeto de archivosGeoJson y agrega las capas al mapa
+archivosGeoJson.forEach(function(archivo) {
+    // Crea una capa de GeoJSON y añádela al mapa
+    var capaGeoJson = L.geoJSON().addTo(map);
+
+    // Asocia un evento al hacer clic en la capa
+    capaGeoJson.on('click', function() {
+        // Obtén la descripción del archivo GeoJSON utilizando el identificador único y muestra una ventana emergente con la descripción
+        var descripcion = obtenerDescripcionGeoJson(archivo.tabla, archivo.campo, archivo.id);
+        L.popup().setContent(descripcion).openOn(map);
+    });
+
+    // Carga el archivo GeoJSON en la capa
+    capaGeoJson.addData(...);
+});
+
+
+En este ejemplo, se utiliza un array archivosGeoJson que contiene información sobre cada archivo GeoJSON, 
+incluido el identificador único, el nombre de la tabla y el campo correspondientes. Luego, se itera sobre cada objeto y se agrega una capa de GeoJSON al mapa.
+Dentro de la función click asociada a cada capa, se llama a la función obtenerDescripcionGeoJson() (que sería tu función obtenerVentanaGeoJson() en PHP) 
+para obtener la descripción del archivo GeoJSON correspondiente utilizando el identificador único. Se crea una ventana emergente (popup) 
+en Leaflet.js con la descripción obtenida y se muestra en el mapa.
+
+Ten en cuenta que este es solo un ejemplo y puedes adaptarlo según tus necesidades y la forma en que estés trabajando con Leaflet.js 
+y los archivos GeoJSON en tu proyecto.

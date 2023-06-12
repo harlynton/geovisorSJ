@@ -1,0 +1,9 @@
+NOMBRE DE LA CAPA: Veredas
+TIPO DE DATO: Shapefile
+DESCRIPCIÓN DE LA CAPA:
+	- Geometría: Polígonos que representan las áreas de las veredas del municipio
+	- Atributos: Código vereda, nombre, división política, población (No. habitantes),
+				 Perímetro, área.
+CORREGIMIENTOS: 6
+VEREDAS: 35
+POBLACIÓN TOTAL RURAL: 19.123 habitantes

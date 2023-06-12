@@ -1,0 +1,12 @@
+Links para la plantilla
+
+leaflet
+https://leafletjs.com/examples/geojson/
+https://juanchiloops.com/mapas-interactivos-con-leaflet/
+https://es.stackoverflow.com/questions/509819/mostrar-popups-de-geojson-en-leaflet
+https://gis.stackexchange.com/questions/309003/leaflet-how-to-show-feature-properties-in-a-box-that-is-not-a-popup
+https://mappinggis.com/2019/11/filtrando-datos-geograficos-en-formato-geojson-con-leaflet/
+https://www.bing.com/search?form=M4036K&OCID=M4036K&q=Bing+AI&showconv=1
+pregunta chat bing: obtener listado de propiedades en leaflet feature.properties
+
+https://qastack.mx/programming/118884/how-to-force-the-browser-to-reload-cached-css-js-files

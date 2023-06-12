@@ -1,0 +1,9 @@
+.container-box {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.container-box>* {
+    flex: 1 1 80px;
+}
